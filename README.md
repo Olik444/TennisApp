@@ -56,9 +56,9 @@ Baza danych **`tennisdb`** zawiera dwie tabele:
 - PostgreSQL
 - Biblioteka Npgsql (do komunikacji z bazą PostgreSQL)
 
-## 2.Tworzenie bazy danych
+### 2. Tworzenie bazy danych
 - zaloguj się do PostreSQL i utwórz baze danych przy użyciu zalączonego pliku
 
-## 3.Zainstaluj NpgSql
+### 3. Zainstaluj NpgSql
 - W visual studio przejdz do Tools > NuGet Package Manager > Package Manager Console i zainstaluj NpgSql
 
