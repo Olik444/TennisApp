@@ -1,0 +1,28 @@
+-- Tabela krajów
+CREATE TABLE countries (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+-- Przykładowe kraje
+INSERT INTO countries (name) VALUES
+('Polska'),
+('Hiszpania'),
+('Francja'),
+('USA'),
+('Australia');
+
+-- Tabela zawodników
+CREATE TABLE players (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    birth_date DATE NOT NULL,
+    country_id INTEGER NOT NULL REFERENCES countries(id),
+    ranking INTEGER NOT NULL CHECK (ranking BETWEEN 1 AND 1000),
+    is_active BOOLEAN NOT NULL
+);
+
+-- Przykładowy zawodnik
+INSERT INTO players (first_name, last_name, birth_date, country_id, ranking, is_active)
+VALUES ('Iga', 'Świątek', '2001-05-31', 1, 1, TRUE);
